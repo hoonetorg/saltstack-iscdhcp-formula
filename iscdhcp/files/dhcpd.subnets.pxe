@@ -33,7 +33,7 @@ subnet {{ s.network }} netmask {{ s.netmask }} {
       { filename "gpxelinux.0" ; }
     } 
   {%- for a in s.additional|default([]) %}
-  {{ a }};
+  {{ a }}
   {%- endfor %}
 }
 {%- endfor -%}

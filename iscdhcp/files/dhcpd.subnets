@@ -24,7 +24,7 @@ subnet {{ s.network }} netmask {{ s.netmask }} {
   {% endfor %}
   option subnet-mask {{ s.netmask }};
   {%- for a in s.additional|default([]) %}
-  {{ a }};
+  {{ a }}
   {%- endfor %}
 }
 {%- endfor -%}
