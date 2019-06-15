@@ -6,7 +6,7 @@
 iscdhcp:
   pkg:
     - installed
-    - pkgs: {{ datamap.pkgs }}
+    - pkgs: {{ datamap.pkgs | tojson }}
   service:
     - {{ datamap.service.state|default('running') }}
     - name: {{ datamap.service.name }}
